@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">    
+    </head>
+        <title>document</title>
+    <body>
+        <div id="div1"></div>
+        <div class="div2"></div>
+        <div name="div3"></div>
+        <div name="div4"></div>
+        <div name="div5"></div>
+        <div name="div6"></div>
+        <div name="div7"></div>
+    </body>
+    <script>
+        let div1=document.getElementById("div1");
+        document.write(div1+"<br>");
+        let div2=document.getElementsByClassName("div2");
+        document.write(div2+"<br>");
+        let div3=document.getElementsByTagName("div");
+        document.write(div3+"<br>");
+        let div4=document.getElementsByName("div4");
+        document.write(div4+"<br>");
+        let div5=div1.parentElement;
+        document.write(div5+"<br>");
+    </script>
+</html>

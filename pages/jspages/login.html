@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <style>
+            body{
+                background-image: url("../img/bg.png");
+            }
+            .center{
+                    width: 30%;
+                    margin: auto;
+                text-align: center;
+                background-color: white;
+            }
+
+    </style>
+</head>
+<body>
+
+    <div class="center">
+        <div>
+            <h3>注册账号</h3>
+        </div>
+        <hr/>
+        <form action="#" method="post" autocomplete="on">
+            <div>
+                <label for="username">姓名：</label>
+                <input type="text" id="username" value="" placeholder="请输入姓名" >
+            </div>
+            <div>
+                <label for="password">密码：</label>
+                <input type="password" id="password" value="" placeholder="请输入密码" >
+            </div>
+            <div>
+                <label for="email">邮箱：</label>
+                <input type="email" id="email" value="" placeholder="请输入邮箱" >
+            </div>
+            <div>
+                <label for="phone">手机：</label>
+                <input type="tel" id="phone" value="" placeholder="请输入手机号" >
+            </div>
+            <hr/>
+
+            <div>
+                <label for="gender">性别：</label>
+                <input id="gender" type="radio" name="gender"value="male">男
+                <input type="radio" name="gender" value="female">女
+            </div>
+
+            <div>
+                <label for="hobby">爱好</label>
+                <input type="checkbox" id="hobby" name="hobby" value="music">音乐
+                <input type="checkbox"  name="hobby" value="movie">电影
+                <input type="checkbox"  name="hobby" value="game">游戏
+            </div>
+            <div>
+                <label for="date">出生日期</label>
+                <input type="date" id="date">
+            </div>
+            <div>
+                <label for="city">所在城市</label>
+                <select id="city" name="city">
+                    <optgroup label="直辖市">
+                        <option value="北京">北京</option>
+                        <option value="上海">上海</option>
+                        <option value="重庆">重庆</option>
+                    </optgroup>
+                    <optgroup label="省会市">
+                        <option value="广州">广州</option>
+                        <option value="杭州">杭州</option>
+                        <option value="南京">南京</option>
+                    </optgroup>
+                </select>
+                <hr/>
+            </div>
+            <div>
+                <label for="sign"> 个性签名</label>
+                <textarea id="sign" rows="5" cols="40" placeholder="请写下你的签名"></textarea>
+            </div>
+            <hr/>
+            <button type="submit" value="注册">注册</button>
+            <button type="reset" value="重置">重置</button>
+        </form>
+    </div>
+</body>
+</html>

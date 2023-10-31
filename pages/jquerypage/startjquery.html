@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">我是div</div>
+</body>
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script>
+        document.write("<pre>==============js和jq的区别==================</pre>")
+        let jsdiv=document.getElementById("div");
+        document.write(jsdiv)
+        document.write(jsdiv.innerHTML)
+        document.write("<pre>================================</pre>")
+        let jqdiv=$("#div");
+        document.write(jqdiv)
+        document.write(jqdiv.html())
+        document.write("<pre>==============js转jq的对象转换==================</pre>")
+        let jq = $(jsdiv);
+        document.write(jq.html());
+        document.write("<pre>==============jq转js的对象转换==================</pre>")
+        let js=jq[0]
+        document.write(js.innerHTML)
+    </script>
+</html>

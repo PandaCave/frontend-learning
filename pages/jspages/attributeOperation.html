@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <a>touch me</a>
+    </body>
+    <script>
+        var tag=document.getElementsByTagName("a")[0];
+        tag.setAttribute("href","https:www.baidu.com");
+        let attribute=tag.getAttribute("href");
+        alert(attribute);
+        tag.className="aclass";
+        tag.style.color=red;
+        tag.removeAttribute("href")
+
+    </script>
+
+</html>

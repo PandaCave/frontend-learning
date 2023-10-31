@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border: 1px solid;
+        margin: auto;
+        width: 500px;
+    }
+
+    td,th{
+        text-align: center;
+        border: 1px solid;
+    }
+    div{
+        text-align: center;
+        margin: 50px;
+    }
+</style>
+<body>
+    <div>
+        <input type="text" id="name" placeholder="请输入姓名" autocomplete="off">
+        <input type="text" id="age" placeholder="请输入年龄"  autocomplete="off">
+        <input type="text" id="gender" placeholder="请输入性别"  autocomplete="off">
+        <input type="button" id="add" value="添加">
+    </div>
+    <table id="table">
+        <caption>学生信息表</caption>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>zhangsan</td>
+            <td>15</td>
+            <td>man</td>
+            <td><a href="JavaScript:void(0);" onclick="drop(this)">删除</a></td>
+        </tr>
+    </table>
+</body>
+        <script>
+            let add=document.getElementById("add");
+            add.onclick=function(){
+                //获取输入栏的数值
+                let name=document.getElementById("name").value;
+                let age=document.getElementById("age").value;
+                let gender=document.getElementById("gender").value;
+                //创建文本 并赋值
+                let nameText=document.createTextNode(name);
+                let ageText=document.createTextNode(age);
+                let genderText=document.createTextNode(gender);
+                let delTest=document.createTextNode("删除");
+                //创建tr 为添加到table准备
+                let tr=document.createElement("tr");
+                //创建td为存入文本准备
+                let nameTd=document.createElement("td");
+                let ageTd=document.createElement("td");
+                let genderTd=document.createElement("td");
+                let delTd=document.createElement("td");
+                let a=document.createElement("a");
+                a.setAttribute("href","JavaScript:void(0);")
+                a.setAttribute("onclick","drop(this)")
+                //存入文本
+                nameTd.appendChild(nameText);
+                ageTd.appendChild(ageText);
+                genderTd.appendChild(genderText);
+                delTd.appendChild(a);
+                a.appendChild(delTest);
+                //将td加到tr
+                tr.appendChild(nameTd);
+                tr.appendChild(ageTd);
+                tr.appendChild(genderTd);
+                tr.appendChild(delTd);
+                //将tr加到td
+                let table=document.getElementById("table");
+                table.appendChild(tr);
+            }
+        function drop(obj){
+                //let table= document.getElementById("table");
+                let table=obj.parentElement.parentElement.parentElement;
+                let tr=obj.parentElement.parentElement;
+                table.removeChild(tr);
+            }
+        </script>
+</html>

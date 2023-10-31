@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <select id="s">
+            <option>广东</option>
+            <option>广西</option>
+            <option>福建</option>
+        </select>
+        
+        <script>
+            let opt=document.createElement("option");
+            opt.innerText="河南";
+            let sel=document.getElementById("s");
+            sel.appendChild(opt);
+            //sel.removeChild(opt);
+            let opt2=document.createElement("option");
+            opt2.innerText="北京";
+            sel.replaceChild(opt2,opt)
+            </script>
+    </body>
+</html>
