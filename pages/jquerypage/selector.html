@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+            $(document).ready(function(){
+                $("li:eq(2)").css('color','#FF0000');
+                //匹配所有大于给定索引值的元素
+                $("li:gt(2)").css('color','#0000FF');
+                //匹配所有小于给定索引值的元素
+                $("li:lt(2)").css('color','#FF00FF');
+        })
+</script>
+<body>
+    <div id="div1">div1</div>
+    <div class="cls">div2</div>
+    <div class="cls">div3</div>
+
+    <div>
+        <span>s1
+            <span>s1-1</span>
+            <span>s1-2</span>
+        </span>
+        <span>s2</span>
+    </div>
+    <span>s2
+        <span>s1-1</span>
+        <span>s1-2</span>
+        <span>s1-2</span>
+    </span>
+    <span>s3
+        <span>s1-1</span>
+    </span>
+
+
+    <input type="text">
+    <input type="password">
+    <input type="password">
+
+    <div>div1</div>
+    <div id="div2">div2</div>
+    <div>div3</div>
+    <div>div4</div>
+
+    <ol>
+        <li>Java</li>
+        <li>C#</li>
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>C++</li>
+    </ol>
+
+</body>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script>
+                $(document).ready(function(){
+                $("li:eq(2)").css('color','red');
+                //匹配所有大于给定索引值的元素
+                $("li:gt(2)").css('color','blue');
+                //匹配所有小于给定索引值的元素
+                $("li:lt(2)").css('color','green');
+        })
+{    //1.元素选择器   $("元素的名称")
+    let div1=$("div");
+    //2.id选择器    $("#id的属性值")
+    let div2=$("#div1");
+    //3.类选择器     $(".class的属性值")
+    let div3=$(".cls");
+    document.write("<pre>==============  ================</pre>")
+    let a=$("div span");
+    document.write(a.length);
+    document.write("<pre>============== > =================</pre>")
+    let b=$("div > span")
+    document.write(b.length);
+    document.write("<pre>============== + ================</pre>")
+    let c=$("div + span");
+    document.write(c.length);
+    document.write("<pre>============== ~ ==============</pre>")
+    let d=$("div ~ span")
+    document.write(d.length)
+
+    document.write("<pre>===============A[]=============</pre>")
+    let attribute= $("input[type]");
+    document.write(attribute.length)
+    document.write("<pre>===============A[c=c]============</pre>")
+    let attributeValue=$("input[type='password']")
+    document.write(attributeValue.length)
+    document.write("<pre>===========================</pre>")
+    }
+    {
+        document.write("<pre>============filterSelector=== not里面是#id; =><里面是index============</pre>")
+        document.write("<pre>==============div:first=============</pre>")
+        let div1=$("div:first");
+        document.write(div1.html());
+        document.write("<pre>===============div:last============</pre>");
+        let div2=$("div:last");
+        document.write(div2.html());
+        document.write("<pre>============div:not(div2)写错了,应该是div:not(#div2)===============</pre>");
+        let div3=$("div:not(#div2)")
+        document.write(div3.length);
+        document.write("<pre>=============div:event 写错了,应该是div:even==============</pre>");
+        let div4=$("div:even");
+        document.write(div4.length);
+        document.write("<pre>==============div:odd=============</pre>");
+        let div5=$("div:odd");
+        document.write(div5.length);
+        
+        document.write("<pre>===========lt和gt取的值反过来了?================</pre>");
+
+        
+    }
+
+</script>
+</html>
