@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        div{
+            border:100px;
+            color: black;
+        }
+    </style>
+
+    <body>
+        <div id="div" class="d1">
+            <table id="table" border="1" width="800" align="center">
+                <caption>table</caption>
+                <tr>
+                    <th align="left"><button id="btn1" style="background-color: rgb(141, 199, 141);">全选</button><button id="btn2" style="background-color: rgb(141, 199, 141);">全不选</button><button id="btn3" style="background-color: rgb(141, 199, 141);">反选</button></td>
+                    <th>分类ID</td>
+                    <th>分类名称</td>
+                    <th>分类描述</td>
+                    <th>操作</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="c1" class="item"></td>
+                    <td>1</td>
+                    <td>phone</td>
+                    <td>phoneitem</td>
+                    <td><a href="#" id="update1">修改</a>|<a href="#" id="del1">删除</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="c2" class="item"></td>
+                    <td>2</td>
+                    <td>computer</td>
+                    <td>computerItem</td>
+                    <td><a href="#" id="update2">修改</a>|<a href="#" id="del2">删除</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="c3" class="item"></td>
+                    <td>3</td>
+                    <td>shoes</td>
+                    <td>shoesItem</td>
+                    <td><a href="#" id="update3">修改</a>|<a href="#" id="del3">删除</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="c4" class="item"></td>
+                    <td>4</td>
+                    <td>house</td>
+                    <td>houseItem</td>
+                    <td><a href="#" id="update4">修改</a>|<a href="#" id="del4">删除</a></td>
+                </tr>
+
+            </table>
+        </div>
+    </body>
+        <script src="../../js/jquery-3.3.1.min.js"></script>
+        <script>
+            $("#btn1").click(function(){
+                $(".item").prop("checked",true);
+            })
+            $("#btn2").click(function(){
+                $(".item").prop("checked",false);
+            })
+            $("#btn3").click(function(){
+                let items=$(".item");
+                items.each(function(){
+                    $(this).prop("checked",!$(this).prop("checked"))
+                })
+            })
+            
+        </script>
+</html>
