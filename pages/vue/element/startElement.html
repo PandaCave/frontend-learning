@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../../../element-ui/lib/theme-chalk/index.css">
+        <script src="../../../js/vue.js"></script>
+        <script src="../../../element-ui/lib/index.js"></script>
+    </head>
+    <body>
+            <button>button</button>
+            <br>
+            <div id="div">
+                <el-row>
+                    <el-button>normal</el-button>
+                    <el-button type="primary">primary</el-button>
+                    <el-button type="success">success</el-button>
+                    <el-button type="info">info</el-button>
+                    <el-button type="warning">warning</el-button>
+                    <el-button type="danger">danger</el-button>
+                </el-row>
+                <br>
+                <el-row>
+                    <el-button plain>plain</el-button>
+                    <el-button type="primary">primary</el-button>
+                    <el-button type="success">success</el-button>
+                    <el-button type="info">info</el-button>
+                    <el-button type="warning">warning</el-button>
+                    <el-button type="danger">danger</el-button>
+                </el-row>
+                <br>
+                <el-row>
+                    <el-button round>round</el-button>
+                    <el-button type="primary">primary</el-button>
+                    <el-button type="success">success</el-button>
+                    <el-button type="info">info</el-button>
+                    <el-button type="warning">warning</el-button>
+                    <el-button type="danger">danger</el-button>
+                </el-row>
+                <el-row>
+                    <el-button icon="el-icon-search" circle></el-button>
+                    <el-button type="primary" icon="el-icon-edit" circle></el-button>
+                    <el-button type="success" icon="el-icon-check" circle></el-button>
+                    <el-button type="info" icon="el-icon-message" circle></el-button>
+                    <el-button type="warning" icon="el-icon-star-off" circle></el-button>
+                    <!-- <el-button type="danger" icon="el-icon-delete" circle></el-button> -->
+                    <el-button type="danger" icon="el-icon-delete" circle></el-button>
+                  </el-row>
+                  
+            </div>
+    </body>
+    <script>
+        new Vue({
+            el:"#div"
+        });
+    </script>
+</html>
