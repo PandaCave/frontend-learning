@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div style="left: auto;">
+            <input type="image" id="simg" src="../../img/01.jpg">
+            <input type="button" id="start" value="开始">
+            <input type="button" id="stop" value="停止">
+        </div>
+        <div style="right: auto;">
+            <input type="image" id="bigImg" src="">
+        </div>
+    </body>
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script>
+        let count=0;
+        let img=[
+        "../../img/01.jpg",
+        "../../img/02.jpg",
+        "../../img/03.jpg",
+        "../../img/04.jpg",
+        "../../img/05.jpg",
+        "../../img/06.jpg",
+        "../../img/07.jpg",
+        "../../img/08.jpg",
+        "../../img/09.jpg",
+        "../../img/10.jpg"];
+        let imgurl="";
+        let internal=null;
+        $("#start").click(function(){
+            $("#start").prop("disable",true);
+            $("#stop").prop("disable",false);
+            internal=setInterval(function(){
+            let index=count%10;
+            imgurl=img[index];
+            $("#simg").prop("src",imgurl);
+            count++
+        },10)
+        })
+        
+        $("#stop").click(function(){
+            $("#start").prop("disable",false);
+            $("#stop").prop("disable",true);
+            $("#bigImg").prop("src",imgurl);
+            clearInterval(internal);
+        })
+
+
+
+    </script>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        .my{
+            border:1px solid red;
+        }
+    </style>
+    <body>
+            <div id="div">
+                <div>{{msg}}</div>
+                <div v-html="msg"></div>
+            </div>   
+            
+            <div id="div1">
+                <a v-bind:href="url">百度一下</a>
+                <br>
+                <a :href="url">baidu</a:href>
+                <br>
+                <div :class="cls">div</div>
+            </div>
+    </body>
+    <script src="../../js/vue.js"></script>
+    <script>
+        new Vue({
+            el:"#div",
+            data:{
+                msg:"<b>hello<b>"
+            }
+        });
+
+        new Vue({
+            el:"#div1",
+            data:{
+                url:"https://baidu.com",
+                cls:"my"
+            }
+        })
+    </script>
+</html>

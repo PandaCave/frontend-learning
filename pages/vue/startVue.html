@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="div">
+            {{msg}}
+        </div>
+
+        <div id="div1">
+            <div>姓名：{{name}}</div>
+            <div>姓名：{{classRoom}}</div>
+            <button onclick="hi()">打招呼</button>
+            <button onclick="update()">修改班级</button>
+        </div>
+    </body>
+    <script src="../../js/vue.js"></script>
+    <script>
+        // new Vue({
+        //     el:"#div",
+        //     data:{
+        //         msg:"hello vue"
+        //     }
+        // })
+
+        let vm= new Vue({
+            el:"#div1",
+            data:{
+                name:"zhangsan",
+                classRoom:"三年二班"
+            },
+            methods:{
+                study(){
+                    alert(this.name+"studing in "+this.classRoom)
+                },
+            }
+        })
+        function hi(){
+            vm.study();
+        }
+        function update(){
+            vm.classRoom="四年二班";
+        }
+
+    </script>
+</html>
